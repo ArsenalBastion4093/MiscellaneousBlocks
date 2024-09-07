@@ -35,4 +35,4 @@
 		}
 	}
 	Scratch.extensions.register(new AB4093sToolBox());
-})();
+})(Scratch);
