@@ -1,14 +1,12 @@
 (async function (Scratch) {
-	try { 
-		Scratch.translate.setup(await fetch("https://raw.githubusercontent.com/ArsenalBastion4093/MiscellaneousBlocks/main/translation.json").then(r => r.json()))
-	} catch(e) {
-		Scratch.translate.setup(await fetch("https://mirror.ghproxy.com/https://raw.githubusercontent.com/ArsenalBastion4093/MiscellaneousBlocks/main/translation.json").then(r => r.json()).catch(()=>{}))
-	}
+	Scratch.translate.setup({
+		// empty yet
+	})
 	class AB4093sToolBox {
 		getInfo() {
 			return {
 				id: 'ab4093stool',
-				name: 'AB4093's Toolbox',
+				name: "AB4093's Toolbox",
 				menus: {
 					boolean: {
 						items: [
@@ -33,9 +31,8 @@
 			};
 		}
 		boolean(args) {
-			if (UsernameLgeal(args.USER)) return JSON.stringify(await userdata(args.USER))
-			else return null;
+			return args.B;
 		}
 	}
-	Scratch.extensions.register(new TETRIOSTATS());
+	Scratch.extensions.register(new AB4093sToolBox());
 })();
